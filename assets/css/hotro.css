@@ -87,6 +87,10 @@ h6 {
     color: #65737e;
 }
 
+.search-form input#search:focus {
+    color: #fff;
+}
+
 .search-form .icon {
     position: absolute;
     margin-right: 15px;
@@ -97,8 +101,6 @@ h6 {
     cursor: pointer;
 }
 
-.member-register {
-}
 
 .login-btn,
 .register-btn {
@@ -269,6 +271,7 @@ h6 {
     position: absolute;
     margin-top: 49px;
     display: none;
+    z-index: 999;
 }
 
 .select-box li a:hover {
@@ -392,7 +395,7 @@ h6 {
     display: block;
     height: auto;
     width: 100%;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 .faq li .ask {
@@ -406,6 +409,14 @@ h6 {
     min-height: 76px;
     cursor: pointer;
     position: relative;
+}
+
+.faq li .ask:hover {
+    background-color: #e00d7a;    
+}
+
+.faq li .ask:hover .answer-wrap {
+    display: block;
 }
 
 .faq li .number {
@@ -449,7 +460,7 @@ h6 {
 }
 
 .answer-wrap {
-    display: block;
+    display: none;
     width: 100%;
     height: 896px;
     overflow: hidden;
@@ -483,4 +494,170 @@ h6 {
     vertical-align: middle;
 }
 
+.faq-form {
+    position: relative;
+    width: 90%;
+    height: auto;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    z-index: 1;
+}
+
+.faq-form form {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.require-col {
+    width: 100%;
+    position: relative;
+}
+
+.faq-form .input-text {
+    margin-bottom: 10px;
+}
+
+.faq-form .focus-text {
+    height: 44px;
+    line-height: 44px;
+}
+
+.focus-text {
+    font-family: 'MyriadLight';
+    font-weight: normal;
+    color: #707070;
+    font-size: 16px;
+    line-height: 48px;
+    padding: 0 20px;
+    width: auto;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    pointer-events: none;
+    text-transform: uppercase;
+}
+
+.faq-form .input-text input[type="text"] {
+    border-radius: 25px;
+    font-family: 'MyriadLight';
+    color: #818181;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    width: 100%;
+    height: auto;
+    font-weight: normal;
+    background-color: rgba(255,255,255,1);
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 40px rgb(0 0 0 / 10%) inset;
+}
+
+.faq-form .input-text input[type="text"]:focus, .input-area textarea:focus {
+    background-color: #e00d7a;
+    color: #fff;
+    opacity: 1;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.input-text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: 3px 3px 0 rgb(0 0 0 / 10%);
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.faq-form .name {
+    width: 100%;
+    float: none;
+}
+
+.faq-form .tel {
+    width: 49.5%;
+    float: left;
+}
+
+.input-area {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin: 5px 0 0 0;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 5px 5px 0 rgb(0 0 0 / 10%);
+    border-radius: 25px;
+}
+
+.input-area textarea {
+    border-radius: 25px;
+    font-family: 'MyriadLight';
+    color: #818181;
+    font-size: 18px;
+    line-height: 22px;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 200px;
+    padding: 10px 15px;
+    font-weight: normal;
+    background-color: rgba(255,255,255,1);
+    resize: none;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%) inset;
+}
+
+textarea:focus::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.faq-form .email {
+    width: 49.5%;
+    float: right;
+}
+
+.faq-form .input-but {
+    text-align: center;
+    margin-top: 34px;
+}
+
+.input-but {
+    position: relative;
+    width: auto;
+}
+
+.input-but input[type="button"] {
+    font-family: 'Futurab';
+    font-weight: normal;
+    font-size: 24px;
+    text-transform: uppercase;
+    background-color: #f37520;
+    color: #fff;
+    border-radius: 30px 30px 30px 0;
+    -webkit-border-radius: 30px 30px 30px 0;
+    padding: 15px 31px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    -webkit-appearance: none;
+}
+
+.faq-form .input-but input[type="button"] {
+    font-size: 24px;
+    padding: 15px 31px;
+}
 
