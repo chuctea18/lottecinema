@@ -1,37 +1,35 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
-var show = $('.ask')
-show.innerHTML = '<h1>Heading</h1>'
-show.onclick = function () {
-    console.log("clicked");
-    // var html = `
-    // <div class="answer">
-    //                                         <span class="text">Trả lời</span>
-    //                                         <div class="answer-detail">
-    //                                             <p>HƯỚNG DẪN MUA VÉ ONLINE</p>
-    //                                             <p><u>Điều kiện</u></p>
-    //                                             <p>- Bạn phải là thành viên Lotocinema</p>
-    //                                             <p>- Nếu không là thành viên vui lòng đăng ký thành viên trên website để
-    //                                                 được mua vé</p>
-    //                                             <p><u>Bước 2</u></p>
-    //                                             <p>Đăng nhập</p>
-    //                                             <p><u>Bước 3:</u></p>
-    //                                             <p>- Chọn loại vé và số lượng:</p>
-    //                                             <p><u>Bước 4:</u></p>
-    //                                             <p>Chọn ghế:</p>
-    //                                             <p>Chọn thức ăn:</p>
-    //                                             <p><u>Bước 5:</u></p>
-    //                                             <p>- Đồng ý</p>
-    //                                             <p>- Đồng ý các điều khoản</p>
-    //                                             <p>- Chọn loại thẻ thanh toán.</p>
-    //                                             <p>- Thanh toán.</p>
-    //                                             <p><u>Bước 6:</u> Nhập thông tin tài khoản để thanh toán việc mua
-    //                                                 online.</p>
-    //                                             <p>HOÀN TẤT</p>
-    //                                         </div>
-    //                                     </div>
-    // `
+var ask0 = document.getElementById("ask-0");
+var ask1 = document.getElementById("ask-1");
+var ask2 = document.getElementById("ask-2");
+var ask3 = document.getElementById("ask-3");
+var arrow0 = document.getElementById("arrow-0")
+var arrow1 = document.getElementById("arrow-1")
+var arrow2 = document.getElementById("arrow-2")
+var arrow3 = document.getElementById("arrow-3")
 
-    // $(".answer-wrap").innerHTML = html.join("\n");
+var i;
+
+
+
+function handle(ask, arrow) {
+    ask.addEventListener("click", function () {
+        console.log(arrow);
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (arrow.classList.contains('rotate-arrow')) {
+            panel.style.display = "none";
+            arrow.classList.remove("rotate-arrow")
+        } else {
+            panel.style.display = "block";
+            arrow.classList.add("rotate-arrow")
+        }
+    });
 }
+
+handle(ask0, arrow0)
+handle(ask1, arrow1)
+handle(ask2, arrow2)
+handle(ask3, arrow3)
